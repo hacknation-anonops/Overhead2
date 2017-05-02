@@ -53,7 +53,7 @@ def work(addr, header):
         except requests.exceptions.RequestException as e:
             # A serious problem happened, like an SSLError or InvalidURL
             print("Error: {}".format(e))
-        refreshStatus(0) if r.status_code == 200 else None
+        refreshStatus() if r.status_code == 200 else None
 def randomUser():
     global user_agents
     rand
