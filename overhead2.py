@@ -90,7 +90,7 @@ def check_input():
     config["threads"] = params.threads if params.threads else 100
     config["proxy"] = parse_proxy(params.proxy) if params.proxy else None
 
-    status = True if check_address(config["web"]) else False
+    status = True if check_address(int(config["web"])) else False
     separator = "#===========================================#"
     print("{0} \n# Target: {1}\n# Threads: {2}\n# Status: {3}\n{0}".format(
         separator,
