@@ -67,7 +67,7 @@ def parse_proxy(proxy):
 def check_address(url):
     try:
         req = requests.get(url)
-        return True if req.status_code == 200 else False
+        return req.status_code == requests.codes.ok
     except ConnectionError:
         print("Connection error")
         return False
@@ -97,7 +97,7 @@ def check_input():
     config["threads"] = params.threads if params.threads else 100
     config["proxy"] = parse_proxy(params.proxy) if params.proxy else None
 
-    status = True if check_address(int(config["web"])) else False
+    status = check_address(config["web"])
     separator = "#===========================================#"
     print("{0} \n# Target: {1}\n# Threads: {2}\n# Status: {3}\n{0}".format(
         separator,
@@ -114,7 +114,7 @@ def main():
     check_input()
     starting_time = time.time()
     create_threads(config["threads"])
-    print("\nRequests made: %d\tTotal time: %d" % (success, time.time() - starting_time))
+    #print("\nRequests made: %d\tTotal time: %d" % (success, time.time() - starting_time))
 
 
 if __name__ == "__main__":
