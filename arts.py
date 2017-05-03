@@ -23,7 +23,7 @@ art3 = """
   ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝
 """
 banners = [art1, art2, art3]
-authors = "			By Woz, MrCuervo & Case."
+authors = "			By !Woz, MrCuervo & Case."
 def Header():
 	header = random.choice(banners)
 	clear = "\x1b[0m"
