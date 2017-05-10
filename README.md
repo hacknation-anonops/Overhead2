@@ -18,17 +18,19 @@ __Currently the proxy option isn't working and POST isn't finished at all__
 
 Installation
 -----------
-
-* Install Python3
+> Install Python3
 $ pip install requests
-& git clone https://github.com/hacknation-anonops/Overhead2.git
+$ git clone https://github.com/hacknation-anonops/Overhead2.git
 
 How it works
 ----------
 
 __GET__
+
 $ python overhead2.py -u target.com --get
+
 $ python overhead2.py -u target.com -t 50 -p tor --get
 
 __POST__
+
 $ python overhead2.py -u target.com/?data= --threads 120 -p 44.44.44.44:80 --post
