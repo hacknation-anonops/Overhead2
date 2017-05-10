@@ -18,9 +18,9 @@ __Currently the proxy option isn't working and POST isn't finished at all__
 
 Installation
 -----------
-> Install Python3
-$ pip install requests
-$ git clone https://github.com/hacknation-anonops/Overhead2.git
+> Install Python3 <br>
+$ pip install requests <br>
+$ git clone https://github.com/hacknation-anonops/Overhead2.git <br>
 
 How it works
 ----------
