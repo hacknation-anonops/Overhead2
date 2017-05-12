@@ -33,3 +33,6 @@ def Header():
 		sys.stdout.write("\x1b[1;%dm%s%s\n" % (color, line, clear))
 		time.sleep(0.1)
 	print("\x1b[1;%dm%s%s\n" % (random.choice(colors),authors, clear))
+
+def options():
+	return "Options:\nType: --get or --post 			| Set the request method\nTarget: -u, --url			| Set the target\nThreads: -t, --threads			| Set the number of threads\nProxy: -p, --proxy			| Set the proxy\nUser-Agent: --User-Agent 		| Set a custom user agent\n\nUsage:\n> Run OverHead2 with 120 threads and using tor:\n$	python3 overhead2.py target.com -t 120 -p tor\n> Run OverHead2 using POST requests and proxy:\n$	python3 overhead2.py --post -u target.com -p 44.44.44.44:474"
